@@ -6,7 +6,8 @@
 document.addEventListener('DOMContentLoaded', () => {
   const data = window.WINSTEEL_DATA || {};
 
-  
+
+
   // Determine current page
   const page = document.body.getAttribute('data-page') || 'home';
 
@@ -144,8 +145,8 @@ function initProductsPage(data) {
     const filtered = data.products.filter(p => {
       const matchesCategory = currentCategory === 'All' || p.category === currentCategory;
       const matchesSearch = p.name.toLowerCase().includes(searchQuery) ||
-                            (p.description && p.description.toLowerCase().includes(searchQuery)) ||
-                            (p.tagline && p.tagline.toLowerCase().includes(searchQuery));
+        (p.description && p.description.toLowerCase().includes(searchQuery)) ||
+        (p.tagline && p.tagline.toLowerCase().includes(searchQuery));
       return matchesCategory && matchesSearch;
     });
 
@@ -205,8 +206,8 @@ function initProjectsPage(data) {
     const filtered = data.projects.filter(p => {
       const matchesCategory = currentCategory === 'All' || p.category === currentCategory;
       const matchesSearch = p.title.toLowerCase().includes(searchQuery) ||
-                            (p.description && p.description.toLowerCase().includes(searchQuery)) ||
-                            (p.location && p.location.toLowerCase().includes(searchQuery));
+        (p.description && p.description.toLowerCase().includes(searchQuery)) ||
+        (p.location && p.location.toLowerCase().includes(searchQuery));
       return matchesCategory && matchesSearch;
     });
 
@@ -295,7 +296,7 @@ function setupModal() {
   }
 }
 
-window.openModal = function(type, id) {
+window.openModal = function (type, id) {
   const data = window.WINSTEEL_DATA || {};
   const overlay = document.getElementById('modal-overlay');
   const modalBody = document.getElementById('modal-body');
