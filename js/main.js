@@ -6,6 +6,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   const data = window.WINSTEEL_DATA || {};
 
+  
   // Determine current page
   const page = document.body.getAttribute('data-page') || 'home';
 
